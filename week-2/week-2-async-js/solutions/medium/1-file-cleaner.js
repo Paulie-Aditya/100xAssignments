@@ -1,26 +1,11 @@
-const fs = require('fs');
+const fs = require("fs");
 
 
-const cleanFile = (filePath) => {
+fs.readFile("a.txt", "utf-8", function(err, data){
+    // trim all data
+    console.log(data);
+    data = data.replace(/\s+/g, ' ').trim();
+    fs.writeFile("a.txt", data, function(err, contents){
 
-    fs.readFile(filePath, 'utf8', (err, data) => {
-        if (err) {
-            console.error('Error reading the file:', err);
-            return;
-        }
-
-        const cleanedContent = data.replace(/\s+/g, ' ').trim();
-
-        fs.writeFile(filePath, cleanedContent, 'utf8', (err) => {
-            if (err) {
-                console.error('Error writing to the file:', err);
-                return;
-            }
-            console.log('File cleaned successfully.');
-        });
-    });
-};
-
-
-const filePath = 'example.txt'; 
-cleanFile(filePath);
+    })
+})

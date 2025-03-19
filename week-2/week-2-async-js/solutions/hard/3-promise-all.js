@@ -1,6 +1,6 @@
 function wait1(t) {
     return new Promise((resolve) => {
-      setTimeout(resolve, t * 1000); // Convert seconds to milliseconds
+      setTimeout(resolve, t * 1000); 
     });
   }
   

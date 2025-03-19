@@ -1,13 +1,9 @@
 function wait1(time) {
     return new Promise(resolve => setTimeout(resolve, time*1000));
 }
-
-// Placeholder wait function
 function wait2(time) {
     return new Promise(resolve => setTimeout(resolve, time*1000));
 }
-
-// Placeholder wait function
 function wait3(time) {
     return new Promise(resolve => setTimeout(resolve, time*1000));
 }

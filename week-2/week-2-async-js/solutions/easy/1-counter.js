@@ -1,9 +1,4 @@
-let counter = 0; 
-
-
-const updateCounter = () => {
-  counter++; 
-  console.log(counter);
-};
-
-setInterval(updateCounter, 1000);
+let cnt = 0;
+setInterval(function(){
+    cnt++; console.log(cnt)
+},1000)

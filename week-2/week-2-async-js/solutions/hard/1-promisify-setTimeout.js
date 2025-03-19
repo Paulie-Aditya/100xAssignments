@@ -1,10 +1,10 @@
-function wait(n) {
-    let p = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, n * 1000);
-    });
-    return p;
+function setTimeoutPromisified(ms){
+    return new Promise((resolve,reject)=>{
+        setTimeout(resolve, ms);
+    })
 }
 
-module.exports = wait;
+
+function wait(n){
+    return setTimeoutPromisified(n);
+}

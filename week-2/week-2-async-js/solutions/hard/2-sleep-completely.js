@@ -5,5 +5,3 @@ function sleep(milliseconds) {
         resolve();
     });
 }
-
-module.exports = sleep;
